@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PistolGun" format=3 uid="uid://vb3e3vmgtgwk"]
+
+[ext_resource type="Script" uid="uid://c6kyusi5o5ht7" path="res://objects/gun/pistol.gd" id="1_6ux22"]
+
+[sub_resource type="Gradient" id="Gradient_6ux22"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6ux22"]
+gradient = SubResource("Gradient_6ux22")
+width = 16
+height = 16
+
+[resource]
+script = ExtResource("1_6ux22")
+muzzle_point_offset = Vector2(8, 0)
+sprite = SubResource("GradientTexture2D_6ux22")
+metadata/_custom_type_script = "uid://c6kyusi5o5ht7"

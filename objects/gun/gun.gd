@@ -18,4 +18,4 @@ extends Resource
 
 
 # muzzle point to mouse coursor/raycast collision
-@abstract func shoot(init_pos : Vector2,end_pos : Vector2) -> void
+@abstract func shoot(init_pos : Vector2,end_pos : Vector2,tree : SceneTree) -> void
