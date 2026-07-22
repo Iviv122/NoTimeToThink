@@ -42,7 +42,6 @@ shape = SubResource("RectangleShape2D_g36xy")
 [node name="Shooter" type="Node2D" parent="PlayerBody" unique_id=610726885 node_paths=PackedStringArray("player_body")]
 script = ExtResource("2_8uh7m")
 player_body = NodePath("..")
-offset = null
 metadata/_custom_type_script = "uid://c84ghgmr7vgod"
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerBody/Shooter" unique_id=1565369025]
