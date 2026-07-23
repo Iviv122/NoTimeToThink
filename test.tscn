@@ -3,29 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://br3bq1tw5mu4i" path="res://game_objects/kamikaze.tscn" id="1_ppyta"]
 [ext_resource type="PackedScene" uid="uid://c0f3krm82xxx7" path="res://game_objects/player_body.tscn" id="2_8uh7m"]
 [ext_resource type="PackedScene" uid="uid://hncmt63iakqa" path="res://game_objects/wall.tscn" id="3_6uqi0"]
-[ext_resource type="Script" uid="uid://bvp5wx68dt8xa" path="res://objects/skill_cast/top_shoot.gd" id="4_ppyta"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_g36xy"]
-radius = 32.0
-
-[sub_resource type="Gradient" id="Gradient_6uqi0"]
-interpolation_mode = 1
-colors = PackedColorArray(1, 1, 1, 1, 0.95686275, 0.95686275, 0.95686275, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ppyta"]
-gradient = SubResource("Gradient_6uqi0")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 0.5)
-
-[sub_resource type="Gradient" id="Gradient_ppyta"]
-offsets = PackedFloat32Array(0.9939759)
-colors = PackedColorArray(1, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ykrsh"]
-gradient = SubResource("Gradient_ppyta")
-width = 8
-height = 8
 
 [node name="Node2D" type="Node2D" unique_id=1277816644]
 
@@ -37,28 +14,6 @@ speed = 400.0
 
 [node name="StaticBody2D" parent="." unique_id=1404694232 instance=ExtResource("3_6uqi0")]
 position = Vector2(-51, 169)
-
-[node name="MortarProjectile" type="Area2D" parent="." unique_id=1003919054 node_paths=PackedStringArray("pre_particle", "bomb")]
-position = Vector2(6, 161)
-script = ExtResource("4_ppyta")
-pre_particle = NodePath("circle")
-bomb = NodePath("bomb")
-end = Vector2(6, 161)
-radius = 128.0
-radius_texture = 32.0
-detonate_time = 1.0
-metadata/_custom_type_script = "uid://bvp5wx68dt8xa"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MortarProjectile" unique_id=749455859]
-shape = SubResource("CircleShape2D_g36xy")
-
-[node name="circle" type="Sprite2D" parent="MortarProjectile" unique_id=514555078]
-self_modulate = Color(1, 0, 0.015686275, 0.73333335)
-texture = SubResource("GradientTexture2D_ppyta")
-
-[node name="bomb" type="Sprite2D" parent="MortarProjectile" unique_id=1626753993]
-top_level = true
-texture = SubResource("GradientTexture2D_ykrsh")
 
 [node name="Kamikaze2" parent="." unique_id=763052371 instance=ExtResource("1_ppyta")]
 position = Vector2(-63, 365)

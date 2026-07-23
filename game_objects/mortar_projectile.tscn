@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://3nkbkk5p04i2"]
+
+[ext_resource type="Script" uid="uid://bvp5wx68dt8xa" path="res://objects/skill_cast/top_shoot.gd" id="1_m2hvs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g36xy"]
+radius = 32.0
+
+[sub_resource type="Gradient" id="Gradient_6uqi0"]
+interpolation_mode = 1
+colors = PackedColorArray(1, 1, 1, 1, 0.95686275, 0.95686275, 0.95686275, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ppyta"]
+gradient = SubResource("Gradient_6uqi0")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_ppyta"]
+offsets = PackedFloat32Array(0.9939759)
+colors = PackedColorArray(1, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ykrsh"]
+gradient = SubResource("Gradient_ppyta")
+width = 8
+height = 8
+
+[node name="MortarProjectile" type="Area2D" unique_id=1518119218 node_paths=PackedStringArray("pre_particle", "bomb")]
+script = ExtResource("1_m2hvs")
+pre_particle = NodePath("circle")
+bomb = NodePath("bomb")
+end = Vector2(6, 161)
+radius = 128.0
+radius_texture = 32.0
+detonate_time = 1.0
+metadata/_custom_type_script = "uid://bvp5wx68dt8xa"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1722650749]
+shape = SubResource("CircleShape2D_g36xy")
+
+[node name="circle" type="Sprite2D" parent="." unique_id=1270880431]
+self_modulate = Color(1, 0, 0.015686275, 0.73333335)
+texture = SubResource("GradientTexture2D_ppyta")
+
+[node name="bomb" type="Sprite2D" parent="." unique_id=438117587]
+top_level = true
+texture = SubResource("GradientTexture2D_ykrsh")

@@ -16,6 +16,7 @@ var parent_weapon : Gun
 @export var radius_texture : float
 @export var detonate_time : float
 
+
 func _ready() -> void:
 	scale *= radius/radius_texture
 	global_position = end
@@ -48,6 +49,6 @@ func bomb_anim() -> void:
 func explode() -> void:
 	for i in get_overlapping_bodies():
 			if i is Enemy:
-				i.damage(3)
+				i.damage(parent_weapon.damage)
 
 	queue_free()
