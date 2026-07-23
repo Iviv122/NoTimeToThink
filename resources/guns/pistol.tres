@@ -14,7 +14,6 @@ height = 16
 
 [resource]
 script = ExtResource("1_6ux22")
-muzzle_point_offset = Vector2(8, 0)
 sprite = SubResource("GradientTexture2D_6ux22")
 projectile = ExtResource("1_fiybo")
 metadata/_custom_type_script = "uid://c6kyusi5o5ht7"
