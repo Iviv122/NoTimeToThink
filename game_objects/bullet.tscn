@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b1uiaw5w4mjxf"]
+
+[ext_resource type="Script" uid="uid://boj57pbs1i8lw" path="res://objects/projectile/bullet.gd" id="1_g84iq"]
+
+[sub_resource type="Gradient" id="Gradient_ppyta"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g14j6"]
+gradient = SubResource("Gradient_ppyta")
+width = 20
+height = 20
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykrsh"]
+
+[node name="Bullet" type="Area2D" unique_id=799700030]
+script = ExtResource("1_g84iq")
+speed = 2000.0
+metadata/_custom_type_script = "uid://boj57pbs1i8lw"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=700283705]
+texture = SubResource("GradientTexture2D_g14j6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1544861937]
+shape = SubResource("RectangleShape2D_ykrsh")

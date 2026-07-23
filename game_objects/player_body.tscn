@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://b27lrqpbonhb1" path="res://objects/player/player_body.gd" id="1_7agsw"]
 [ext_resource type="Resource" uid="uid://dn3c1ysafxeu" path="res://resources/player_pos.tres" id="2_4c2um"]
 [ext_resource type="Script" uid="uid://c84ghgmr7vgod" path="res://objects/player/shooter.gd" id="3_i023p"]
+[ext_resource type="Resource" uid="uid://vb3e3vmgtgwk" path="res://resources/guns/pistol.tres" id="4_4c2um"]
 
 [sub_resource type="Gradient" id="Gradient_37kl0"]
 
@@ -37,6 +38,7 @@ shape = SubResource("RectangleShape2D_g36xy")
 [node name="Shooter" type="Node2D" parent="." unique_id=1496620287 node_paths=PackedStringArray("player_body")]
 script = ExtResource("3_i023p")
 player_body = NodePath("..")
+current_gun = ExtResource("4_4c2um")
 metadata/_custom_type_script = "uid://c84ghgmr7vgod"
 
 [node name="Sprite2D" type="Sprite2D" parent="Shooter" unique_id=1360141178]

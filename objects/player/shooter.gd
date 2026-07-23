@@ -7,6 +7,10 @@ class_name Shooter
 
 var dir : Vector2
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("shoot"):
+		shoot()
+
 func _process(_delta: float) -> void:
 
 	dir = get_global_mouse_position() - player_body.global_position
@@ -20,4 +24,4 @@ func _process(_delta: float) -> void:
 
 
 func shoot() -> void:
-	pass
+	current_gun.shoot(global_position,get_global_mouse_position(),get_tree())

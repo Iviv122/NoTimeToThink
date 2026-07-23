@@ -14,6 +14,9 @@ var _timer : float
 
 func _ready() -> void:
 	body_entered.connect(hit)
+	_timer = timer
+	if dir == Vector2.ZERO:
+		dir = Vector2.RIGHT
 
 
 func _process(delta: float) -> void:
