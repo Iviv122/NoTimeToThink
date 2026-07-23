@@ -29,6 +29,8 @@ func death_effect() -> void:
 
 func damage(amount : float) -> void:
 	health -= amount
+	if health <= 0:
+		die()
 	on_damage(amount)
 
 func die() -> void:
