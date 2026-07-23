@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b27lrqpbonhb1" path="res://objects/player/player_body.gd" id="1_7agsw"]
 [ext_resource type="Resource" uid="uid://dn3c1ysafxeu" path="res://resources/player_pos.tres" id="2_4c2um"]
 [ext_resource type="Script" uid="uid://c84ghgmr7vgod" path="res://objects/player/shooter.gd" id="3_i023p"]
-[ext_resource type="Resource" uid="uid://yrf1acptgi57" path="res://resources/guns/player_mortar.tres" id="4_4c2um"]
+[ext_resource type="Resource" uid="uid://dj37rss0erp0p" path="res://resources/guns/sword_pistol.tres" id="4_4c2um"]
 
 [sub_resource type="Gradient" id="Gradient_37kl0"]
 

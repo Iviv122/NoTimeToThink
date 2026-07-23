@@ -11,6 +11,9 @@ position = Vector2(-4, 284)
 speed = 400.0
 
 [node name="PlayerBody" parent="." unique_id=2091922282 instance=ExtResource("2_8uh7m")]
+speed = 400.0
+dash_duration = 0.2
+dash_modifier = 2.0
 
 [node name="StaticBody2D" parent="." unique_id=1404694232 instance=ExtResource("3_6uqi0")]
 position = Vector2(-51, 169)

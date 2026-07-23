@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="PistolGun" format=3 uid="uid://dj37rss0erp0p"]
+
+[ext_resource type="PackedScene" uid="uid://ch24jx84orc7a" path="res://game_objects/swoosh.tscn" id="1_grjgy"]
+[ext_resource type="Script" uid="uid://c6kyusi5o5ht7" path="res://objects/gun/pistol.gd" id="1_t6jim"]
+
+[sub_resource type="Gradient" id="Gradient_t6jim"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_grjgy"]
+gradient = SubResource("Gradient_t6jim")
+
+[resource]
+script = ExtResource("1_t6jim")
+damage = 2.0
+sprite = SubResource("GradientTexture2D_grjgy")
+projectile = ExtResource("1_grjgy")
+metadata/_custom_type_script = "uid://c6kyusi5o5ht7"
