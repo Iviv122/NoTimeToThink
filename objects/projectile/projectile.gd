@@ -2,7 +2,7 @@
 extends Area2D
 class_name Projectile
 
-@export var speed : float
+@export var speed : float = 400
 @export var timer : float = 3
 
 var parent_gun : Gun

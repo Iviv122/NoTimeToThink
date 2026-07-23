@@ -1,52 +1,16 @@
 [gd_scene format=3 uid="uid://dklmg5chupn7x"]
 
-[ext_resource type="Script" uid="uid://b27lrqpbonhb1" path="res://objects/player/player_body.gd" id="1_37kl0"]
-[ext_resource type="Script" uid="uid://c84ghgmr7vgod" path="res://objects/player/shooter.gd" id="2_8uh7m"]
-
-[sub_resource type="Gradient" id="Gradient_37kl0"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_pkisx"]
-gradient = SubResource("Gradient_37kl0")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g36xy"]
-size = Vector2(64, 64)
-
-[sub_resource type="Gradient" id="Gradient_6uqi0"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_6uqi0"]
-gradient = SubResource("Gradient_6uqi0")
-width = 16
-height = 16
-
-[sub_resource type="Gradient" id="Gradient_8uh7m"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_g36xy"]
-gradient = SubResource("Gradient_8uh7m")
+[ext_resource type="PackedScene" uid="uid://br3bq1tw5mu4i" path="res://game_objects/kamikaze.tscn" id="1_ppyta"]
+[ext_resource type="PackedScene" uid="uid://c0f3krm82xxx7" path="res://game_objects/player_body.tscn" id="2_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://hncmt63iakqa" path="res://game_objects/wall.tscn" id="3_6uqi0"]
 
 [node name="Node2D" type="Node2D" unique_id=1277816644]
 
-[node name="PlayerBody" type="CharacterBody2D" parent="." unique_id=232925231]
-script = ExtResource("1_37kl0")
-metadata/_custom_type_script = "uid://b27lrqpbonhb1"
+[node name="Kamikaze" parent="." unique_id=1398235538 instance=ExtResource("1_ppyta")]
+position = Vector2(-4, 284)
+speed = 400.0
 
-[node name="Sprite2D" type="Sprite2D" parent="PlayerBody" unique_id=1950162341]
-texture = SubResource("GradientTexture2D_pkisx")
+[node name="PlayerBody" parent="." unique_id=2091922282 instance=ExtResource("2_8uh7m")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody" unique_id=861991328]
-shape = SubResource("RectangleShape2D_g36xy")
-
-[node name="Camera2D" type="Camera2D" parent="PlayerBody" unique_id=182159266]
-
-[node name="Shooter" type="Node2D" parent="PlayerBody" unique_id=610726885 node_paths=PackedStringArray("player_body")]
-script = ExtResource("2_8uh7m")
-player_body = NodePath("..")
-metadata/_custom_type_script = "uid://c84ghgmr7vgod"
-
-[node name="Sprite2D" type="Sprite2D" parent="PlayerBody/Shooter" unique_id=1565369025]
-texture = SubResource("GradientTexture2D_6uqi0")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2084930779]
-position = Vector2(87, 143)
-texture = SubResource("GradientTexture2D_g36xy")
+[node name="StaticBody2D" parent="." unique_id=1404694232 instance=ExtResource("3_6uqi0")]
+position = Vector2(-51, 169)

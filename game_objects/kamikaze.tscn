@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://br3bq1tw5mu4i"]
+
+[ext_resource type="Script" uid="uid://b2gpk2i5pet8p" path="res://objects/enemies/kamikaze.gd" id="1_hu22j"]
+[ext_resource type="Resource" uid="uid://dn3c1ysafxeu" path="res://resources/player_pos.tres" id="2_bktlu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pkisx"]
+size = Vector2(64, 64)
+
+[sub_resource type="Gradient" id="Gradient_8uh7m"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g36xy"]
+gradient = SubResource("Gradient_8uh7m")
+
+[node name="Kamikaze" type="CharacterBody2D" unique_id=1398235538]
+script = ExtResource("1_hu22j")
+speed = 600.0
+player_pos = ExtResource("2_bktlu")
+metadata/_custom_type_script = "uid://b2gpk2i5pet8p"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=290408477]
+shape = SubResource("RectangleShape2D_pkisx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1649873412]
+texture = SubResource("GradientTexture2D_g36xy")

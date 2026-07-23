@@ -9,12 +9,17 @@ class_name PlayerBody
 @export var dash_cooldown : float = 1
 @export var dash_modifier : float = 2.5
 
+@export_category("misc")
+@export var player_pos : PlayerPos
 
 var dir : Vector2 = Vector2.ZERO
 var state : State
 
 var _dash_time : float = 0
 var _dash_cooldown : float = 0
+
+func _ready() -> void:
+	player_pos.player = self
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("dash"):
